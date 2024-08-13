@@ -1,34 +1,47 @@
 > A Visual Novel Translator
 
-LunaTranslator is an open-source video game text hooker based off [Textractor](https://github.com/Artikash/Textractor), 
+LunaTranslator is an open-source x86/x64 video game text hooker for Vista/Windows 7+/WINE based on [Textractor](https://github.com/Artikash/Textractor). It's an all-in-one solution for translating text from visual novels (galgames) and other games (like RPGMaker), with additional goodies like Text-To-Speech, Furigana Display, Anki Integration, and more.
 
 ## Features
 
-### 1. Text Extraction
+### Text Sources
 
-There are multiple ways to extract text from a program: 
+LunaTranslator supports multiple methods for extracting text from games:
 
-- **Clipboard Integration**: Easily copy and translate text from clipboard.
-- **Optical Character Recognition (OCR)**:
-  - Offline OCR capability
-  - Support for various OCR services (Windows, Baidu, Youdao, ocrspace, docsumo)
-  - Smart window binding to prevent UI overlap
-- **Text Hooking**:
-  - Extract text directly from game memory
-  - Support for hook codes (H-codes)
-  - Automatic game detection and hook management
-  - Some game engines support embedded translation
+1. **Clipboard**: 
+   - Reads text from the clipboard for translation.
+
+2. **OCR (Optical Character Recognition)**:
+   - **Offline OCR**: Works without an internet connection.
+   - **Online OCR**: Supports WindowsOCR, Baidu OCR, Youdao OCR, ocrspace, and docsumo.
+   - **Game Window Binding**: Binds OCR to the game window to avoid overlap with game content.
+
+3. **Text Hooking**:
+   - Extracts text directly from the game using hooks.
+   - Supports Hook codes (H-codes) for specific games.
+   - Automatically saves and loads game and hook settings.
+   - Some game engines support embedded translation.
 
 ### 2. Translation Services
+LunaTranslator supports a wide range of translation engines:
 
-Supports almost all translation engines you can think of, including:
+1. **Offline Translation**:
+   - J-Beijing 7, Kingsoft FastAIT, YiDianTong, Sakura, TGW, Sugoi.
 
-- **Offline Translators**: J-Beijing 7, Kingsoft FastAIT, YiDianTong, Sakura, TGW, Sugoi
-- **Free Cloud Services**: Google, DeepL, Bing, Baidu, and more
-- **API-based Services**: Translation services from Google, DeepL, Azure, to AI services like ChatGPT, Claude, and Gemini
-- **Chrome Debug Translation**: DeepL, Yandex, Youdao, Baidu, Tencent, Bing, Caiyun, Niutrans, Ali, Google, OpenAI
-- **Pre-translation**: Have a translation of the game lines? You can submit them
-- **Custom Extensions**: Develop your own translation interfaces using Python
+2. **Free Online Translation**:
+   - Google, DeepL, Bing, Baidu, Ali, Youdao, Caiyun, Sogou, Kingsoft, iFlytek, Tencent, ByteDance, Volcano, Papago, Yeekit, and more.
+
+3. **API Online Translation** (requires user registration):
+   - Google, DeepL, Azure, ChatGPT, Claude, Gemini, Baidu, Tencent, Youdao, Niutrans, Caiyun, Volcano, Yandex, IBM, Feishu, Cohere, and more.
+
+4. **Chrome Debug Translation**:
+   - Google, DeepL, Yandex, Youdao, Baidu, Tencent, Bing, Caiyun, Niutrans, Ali, OpenAI.
+
+5. **Pre-translation**:
+   - Supports using pre-translated game files as a translation source.
+
+6. **Custom Translation Extension**:
+   - Your preferred translation engine not here? You can extend it yourself with Python 
 
 ### 3. Text-to-Speech (TTS)
 
@@ -39,25 +52,23 @@ Bring characters to life with various TTS options:
 
 ### 4. Translation Enhancement
 
-Clean up and polish machine translation:
+Improve quality of translations with various tools:
 
 - **Text Processing**: 
-  - Multiple processing methods available
-  - From basic (removing duplicates, line breaks) to advanced (regex replacement)
-  - Custom Python preprocessors for specific needs
+  - Over a dozen text processing methods, from simple tasks like text de-duplication and filtering line breaks to complex regular expression replacements
+  - You can also write your own Python preprocessors
 - **Optimization**: 
   - Custom proper noun translations
   - VNR shared dictionary import
 
 ### 5. Japanese Language Learning Tools
 
-Learning Japanese? These tools will help you:
+LunaTranslator includes tools for Japanese learners:
 
 - **Word Segmentation and Furigana Display**: 
-  - MeCab and other tokenizers supported
-  - Helps with reading and understanding Japanese text
-- **Dictionary Integration**: 
-  - Access multiple online and offline dictionaries (MDICT, Shogakukan, Youdao, Jisho, etc.)
+  - Supports MeCab and other tokenizers.
+- **Dictionary Lookup**: 
+  - Supports various online and offline dictionaries such as MDICT, Shogakukan, Lingoes, EDICT, Youdao, Weblio, Goo, Moji, Jisho, and more.
 - **Anki Flashcard Integration**: 
   - Easily add new vocabulary to your Anki decks for efficient learning
 
